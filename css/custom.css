@@ -47,26 +47,6 @@ svg{
     width: 400px;
 }
 
-@media only screen and (max-width: 1024px) {
-    .logo img{
-        width: 130px;
-    }   
-    .bordered-section{
-        margin-right: 0 !important;
-    }   
-    .pull-up{
-        top:0;
-        font-size: 20px;
-    }
-    .m-ngtive{
-        margin-bottom: 0;
-    }
-    .title{font-size: 14px;}
-    .order-no{
-        font-size: 70px;
-        right: -8px;
-        top: -29px;
-    }}
 .color-pink{
     color:#C71585;
 }
@@ -132,3 +112,24 @@ svg{
 .mini-box.pink{
     background:#ef5285;
 }
+
+@media only screen and (max-width: 1024px) {
+    .logo img{
+        width: 130px;
+    }   
+    .bordered-section{
+        margin-right: 0 !important;
+    }   
+    .pull-up{
+        top:0;
+        font-size: 20px;
+    }
+    .m-ngtive{
+        margin-bottom: 0;
+    }
+    .title{font-size: 14px;}
+    .order-no{
+        font-size: 70px;
+        right: -8px;
+        top: -29px;
+    }}
