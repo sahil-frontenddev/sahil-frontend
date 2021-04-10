@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sahil Lalotra | Front End Developer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <!-- Google fonts - Roboto + Roboto Slab-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet"> 
+    <!-- owl carousel-->
+
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+    <!-- animate.css-->
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" id="theme" href="css/style.violet.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Leaflet CSS - For the map-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- Reference item-->
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        
+        <div class="container"><a href="#intro" class="navbar-brand scrollTo">Sahil Lalotra</a>
+          <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Intro</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link link-scroll">About</a></li>
+              <li class="nav-item"><a href="#services" class="nav-link link-scroll">Services</a></li>
+              <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Testimonials</a></li>
+              <li class="nav-item"><a href="#references" class="nav-link link-scroll">My work</a></li>
+              <li class="nav-item relative"><a  href="#" class="nav-link showPallet">Change theme</a>
+                <div class="color-palet">
+                  <div class="colors">
+                    <div class="box" onclick ="changeTheme(event,'default')">
+                      <span class="mini-box default"></span>
+                      <p class="color-code">Default</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'blue')">
+                      <span class="mini-box blue"  ></span>
+                      <p class="color-code">Blue</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'pink')">
+                      <span class="mini-box pink"></span>
+                      <p class="color-code">Pink</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'green')">
+                      <span class="mini-box green"></span>
+                      <p class="color-code">Green</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'red')">
+                      <span class="mini-box red"></span>
+                      <p class="color-code">Red</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'sea')">
+                      <span class="mini-box sea"></span>
+                      <p class="color-code">Sea</p>
+                    </div>
+                    <div class="box" onclick ="changeTheme(event,'violet')">
+                      <span class="mini-box violet"></span>
+                      <p class="color-code">Violet</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Intro Image-->
+    <section id="intro" style="background: url(img/home.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
+      <div class="container  m-ngtive text-center">
+        <div data-animate="fadeInDown" class="logo"><img src="img/logo-big.png" alt="logo"></div>
+        <h1 data-animate="fadeInDown" class="text-shadow mb-5 color-light pull-up">Hello, hola, नमस्ते !</h1>
+        <p data-animate="slideInUp" class="h3 text-shadow text-400 pull-up">I grind HTML and CSS and then weld them with React,Javascript or wordpress into beautiful and efficient websites.</p>
+      </div>
+    </section>
+    <!-- About-->
+    <section id="about" class="about-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">What Do I do ?</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class=" mr-4 bordered-section" data-animate="fadeInUp">
+              <svg width="30" class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path></svg>
+              <p>I can evaluate your UI / UX designs.</p>
+              <div class="order-no">1</div>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <div class=" mr-4 bordered-section" data-animate="fadeInUp">
+              <svg width="30" class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path></svg>
+              <p>I can code your designs.</p>
+              <div class="order-no">2</div>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <div class=" bordered-section" data-animate="fadeInUp">
+              <svg width="30" class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path></svg>
+              <p>I can examine your codes and make it more stable.
+              </p>
+              <div class="order-no">3</div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div data-animate="fadeInUp" class="col-lg-6">
+            <p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.</p>
+            <p>Received overcame oh sensible so at an. Formed do change merely to county it. <strong>Am separate contempt</strong> domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.</p>
+            <p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.</p>
+          </div>
+          <div data-animate="fadeInUp" class="col-lg-6">
+            <div class="skill-item">
+              <div class="progress-title">PHP</div>
+              <div class="progress">
+                <div role="progressbar" style="width: 60%" aria-valuenow="0" aria-valuemin="60" aria-valuemax="100" class="progress-bar progress-bar-skill1"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="progress-title">Javascript</div>
+              <div class="progress">
+                <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="60" aria-valuemax="100" class="progress-bar progress-bar-skill2"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="progress-title">HTML coding</div>
+              <div class="progress">
+                <div role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-skill3"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="progress-title">SEO</div>
+              <div class="progress">
+                <div role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-skill4"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="progress-title">SEM</div>
+              <div class="progress">
+                <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-skill5"></div>
+              </div>
+            </div>
+          </div>
+          <div data-animate="fadeInUp" class="col-sm-6 mx-auto mt-5"><img src="img/about.jpg" alt="This is me - IT worker" class="image rounded-circle img-fluid"></div>
+        </div> -->
+      </div>
+    </section>
+    <!-- Service-->
+    <section id="services" class="bg-gradient services-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">What do I Use?</h2>
+        </header>
+        <h3 data-animate="d=fadeInDown" class="sub-title">Front-End</h3>
+        <div class="row services text-center">
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-html5"></i></div>
+            <p class="text-center">Html5</p>
+           </div>
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-css3" aria-hidden="true"></i>
+              
+            </div>
+            <p class="text-center">Css3</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-sass"></i></div>
+            <p class="text-center">Sass/Less</p>
+           </div>
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-js"></i></div>
+            <p class="text-center">Javascript</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-react"></i></div>
+            <p class="text-center">React</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-wordpress"></i></div>
+            <p class="text-center">Wordpress</p>
+           </div>
+        </div>
+        <hr data-animate="fadeInUp">
+        <h3 data-animate="d=fadeInDown" class="sub-title">My Tools and methologies which I Use to manage</h3>
+        <div class="row services text-center">
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <p class="text-center">Agile Methology</p>
+           </div>
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-github" aria-hidden="true"></i>
+              
+            </div>
+            <p class="text-center">Gihub</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fas fa-bug"></i></div>
+            <p class="text-center">BugZila</p>
+           </div>
+          <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="far fa-file-code"></i></div>
+            <p class="text-center">Bem</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fab fa-slack"></i></div>
+            <p class="text-center">Slack</p>
+           </div>
+           <div data-animate="fadeInUp" class="col-lg-2">
+            <div class="icon"><i class="fas fa-sitemap"></i></div>
+            <p class="text-center">Sitmap</p>
+           </div>
+        </div>
+        <hr data-animate="fadeInUp">
+        <div data-animate="fadeInUp" class="text-center">
+          <p class="lead">Would you like to know more or just discuss something?</p>
+          <p><a href="#contact" class="btn btn-outline-light link-scroll">Contact me</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials-->
+    <section id="testimonials" class="testimonials-section bg-gray">
+      <div class="container">
+        <header class="text-center mb-2">
+          <h2 data-animate="fadeInUp" class="title">My customers said<br><span>about me</span></h2>
+          <p data-animate="fadeInUp" class="lead">I am always glad to hear that my customers leave satisfied. Some of them shared with you their insights on our cooperation.</p>
+        </header>
+        <ul data-animate="fadeInUp" class="owl-carousel owl-theme testimonials equalize-height">
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i></div>
+                <div class="name-picture"><img alt="" src="img/person-1.jpg">
+                  <h5>John McIntyre</h5>
+                  <p>CEO, TransTech</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &quot;What is happened to me? &quot; he thought. It was not a dream.</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i></div>
+                <div class="name-picture"><img alt="" src="img/person-2.jpg">
+                  <h5>John McIntyre</h5>
+                  <p>CEO, TransTech</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i></div>
+                <div class="name-picture"><img alt="" src="img/person-3.jpg">
+                  <h5>John McIntyre</h5>
+                  <p>CEO, TransTech</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i></div>
+                <div class="name-picture"><img alt="" src="img/person-4.jpg">
+                  <h5>John McIntyre</h5>
+                  <p>CEO, TransTech</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="testimonial full-height">
+              <div class="text">
+                <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i></div>
+                <div class="name-picture"><img alt="" src="img/person-4.jpg">
+                  <h5>John McIntyre</h5>
+                  <p>CEO, TransTech</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--
+    *** REFERENCES IMAGE ***
+    _________________________________________________________
+    -->
+    <section id="references">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="mb-5 text-center">
+            <h2 data-animate="fadeInUp" class="title">My work</h2>
+            <p data-animate="fadeInUp" class="lead">I have worked on dozens of projects so I have picked only the latest for you.</p>
+          </div>
+          <ul id="filter" data-animate="fadeInUp">
+            <li class="active"><a href="#" data-filter="all">All</a></li>
+            <li><a href="#" data-filter="webdesign">Webdesign</a></li>
+            <li><a href="#" data-filter="seo">SEO</a></li>
+            <li><a href="#" data-filter="marketing">Marketing</a></li>
+            <li><a href="#" data-filter="other">Other</a></li>
+          </ul>
+          <div id="detail">
+            <div class="row">
+              <div class="col-lg-10 mx-auto"><span class="close">×</span>
+                <div id="detail-slider" class="owl-carousel owl-theme"></div>
+                <div class="text-center">
+                  <h1 id="detail-title" class="title"></h1>
+                </div>
+                <div id="detail-content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Reference detail-->
+          <div id="references-masonry" data-animate="fadeInUp">
+            <div class="row">
+                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-1.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-2.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name 2</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider3.jpg,img/main-slider1.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-3.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name 3</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-4.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name 4</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-5.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name 5</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-6.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name 6</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-7.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-8.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Project name</h3>
+                            <p>Short project description goes here...</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg" class="sr-only reference-description">
+                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact-->
+    <section id="contact" data-animate="bounceIn" class="contact-section contact">
+      <div class="container">
+        <header class="text-center">
+          <h2 class="title">Contact me</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p class="text-center">
+
+              Whats app : <a href="whatsapp://+918146596690">+918146596690</a>
+                Email :<a href="mailto:slalotra.ux@gmail.com">slalotra.ux@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map-->
+    <div id="map"></div>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social"><a href="https://www.facebook.com/sahillalotra.thakur" target="_blank" class="external facebook wow fadeInUp"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/radical_rajpoot/" target="_blank" data-wow-delay="0.2s" class="external instagram wow fadeInUp"><i class="fab fa-instagram"></i></a><a href="#" data-wow-delay="0.6s" class="email wow fadeInUp"><i class="fab fa-linkedin"></i></a></p>
+          </div>
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2021 Created by: Sahil lalotra. With <i class="fas fa-heart color-pink"></i>.</p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="js/front.js"></script>
+  </body>
+</html>

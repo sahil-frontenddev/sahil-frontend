@@ -1,0 +1,129 @@
+/* your styles go here */
+.color-light{
+
+    color:#333;
+}
+.pull-up{
+    position: relative;
+    top: -105px;
+}
+.intro-section .logo, .intro-section p{
+    margin-bottom: 0;
+}
+.m-ngtive{
+    margin-bottom: -100px;
+}
+
+.bordered-section{
+    display: flex;
+    border:1px solid #a2a2a2;
+    border-radius: 20px;
+    padding:10px 10px;
+    position: relative;
+    align-items: center;
+    justify-content: left;
+    height: 64px;
+    margin-bottom: 40px;
+}
+.bordered-section svg{
+    margin-right: 12px;
+
+}
+.order-no{
+    color:#a0a0a2;
+    font-size: 112px;
+    position: absolute;
+    right: -20px;
+    top: -62px;
+    font-family: 'Merriweather', serif;
+}
+svg{
+    color:#a0a0a2;
+}
+.bordered-section p {
+    margin-bottom: 0;
+}
+.logo img{
+    width: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .logo img{
+        width: 130px;
+    }   
+    .bordered-section{
+        margin-right: 0 !important;
+    }   
+    .pull-up{
+        top:0;
+        font-size: 20px;
+    }
+    .m-ngtive{
+        margin-bottom: 0;
+    }
+    .title{font-size: 14px;}
+    .order-no{
+        font-size: 70px;
+        right: -8px;
+        top: -29px;
+    }}
+.color-pink{
+    color:#C71585;
+}
+
+.color-palet {
+    position: absolute;
+    background: #534646;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    top: 62px;
+    color: #fff;
+    display: none;
+  }
+  .colors {
+    display: flex;
+    border-radius: 20px;
+  }
+  .box {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .mini-box {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /* background: red; */
+    margin: 0 auto;
+  }
+  .color-code {
+    margin: 0;
+    color: #fff;
+  }
+
+  .mini-box.violet{
+      background:#9055A2;
+  }
+  .mini-box.sea{
+    background:#007bff;
+}
+
+.mini-box.default{
+    background:#4fbfa8;
+}
+.mini-box.green{
+    background:#429244;
+}
+.mini-box.red{
+    background:#ff3f3f;
+}
+.mini-box.blue{
+    background:#2b90d9;
+}
+.mini-box.pink{
+    background:#ef5285;
+}
